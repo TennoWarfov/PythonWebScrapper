@@ -8,13 +8,13 @@ def save_function(article_list):
         json.dump(article_list, outfile)
 
 # scraping function
-def hackernews_rss(url='https://news.ycombinator.com/rss'):
+def hackernews_rss():
     article_list = []
 
     try:
         # execute my request, parse the data using XML
         # parser in BS4
-        r = requests.get(url)
+        r = requests.get('https://news.ycombinator.com/rss')
         soup = BeautifulSoup(r.content, features='xml')
 
         # select only the "items" I want from the data
