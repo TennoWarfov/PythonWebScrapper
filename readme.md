@@ -7,6 +7,8 @@ This is a project created to illustrate the basics of web scraping by pulling in
 
 2. Automated web scraping with Python and Celery is available [here](https://codeburst.io/automated-web-scraping-with-python-and-celery-ac02a4a9ce51).
 
+3. Making a web scraping application with Python, Celery, and Django [here]().
+
 ## Automated scraping commands
 The following are used to start the scheduled scraping with Celery in `tasks.py`.
 
@@ -15,9 +17,9 @@ Starting our RabbitMQ server (terminal #1):
 rabbitmq-server
 ```
 
-Starting the scraping (terminal #2):
+Starting the scraping and Django app (terminal #2):
 ```
-celery -A tasks worker -B -l INFO
+python manage.py runserver
 ```
 
 MIT License.
